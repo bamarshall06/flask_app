@@ -9,8 +9,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
 # create db model
-
-
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -37,7 +35,6 @@ def hello_world():
     else:
         tasks = Todo.query.order_by(Todo.date_completed).all()
         return render_template('index.html', tasks=tasks)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
