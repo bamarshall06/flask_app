@@ -10,7 +10,7 @@ def index():
 
 @app.route('/<name>')
 def firstname(name):
-    return f'<h1>Hello Moto {name} the big sec </h1>'
+    return f'<h1>Hello Moto {name} the big sec Georgia won last nights game hard </h1>'
 
 
 if __name__ == '__main__':
